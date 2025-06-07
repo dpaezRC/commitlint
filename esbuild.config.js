@@ -2,7 +2,7 @@ const esbuild = require("esbuild");
 
 esbuild
   .build({
-    entryPoints: ["index.js"],
+    entryPoints: ["./src/main.js"],
     bundle: true,
     platform: "node",
     target: "node18",
@@ -11,5 +11,4 @@ esbuild
     sourcemap: false,
     external: ["express"],
   })
-  // eslint-disable-next-line no-undef
   .catch(() => process.exit(1));

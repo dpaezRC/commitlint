@@ -4,7 +4,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node dist/bundle.js",
-    "dev": "node index.js",
+    "dev": "node ./src/main.js",
     "lint": "eslint . --ext .js",
     "build": "node esbuild.config.js",
     "prepare": "husky",
@@ -15,6 +15,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "morgan": "^1.10.0"
   },
