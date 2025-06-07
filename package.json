@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node dist/bundle.js",
     "dev": "node index.js",
+    "lint": "eslint . --ext .js",
     "build": "node esbuild.config.js",
     "prepare": "husky"
   },
@@ -19,7 +20,10 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/js": "^9.28.0",
     "esbuild": "^0.25.5",
+    "eslint": "^9.28.0",
+    "globals": "^16.2.0",
     "husky": "^9.1.7"
   }
 }

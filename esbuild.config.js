@@ -11,4 +11,5 @@ esbuild
     sourcemap: false,
     external: ["express"],
   })
+  // eslint-disable-next-line no-undef
   .catch(() => process.exit(1));
