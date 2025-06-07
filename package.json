@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
+    "start": "node dist/bundle.js",
+    "dev": "node index.js",
+    "build": "node esbuild.config.js",
     "prepare": "husky"
   },
   "keywords": [],
@@ -16,6 +19,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
+    "esbuild": "^0.25.5",
     "husky": "^9.1.7"
   }
 }
