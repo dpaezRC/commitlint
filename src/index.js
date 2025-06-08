@@ -5,8 +5,10 @@ const cors = require("cors");
 const morgan = require("morgan");
 const compression = require("compression");
 
-const { PORT, NODE_ENV, NODE_ENVS } = require("./config/env.config");
-const rateLimit = require("./config/rateLimit.config");
+const logger = require("./utils/logger.util");
+const { PORT, NODE_ENV, NODE_ENVS } = require("./config");
+const rateLimit = require("./middlewares/rateLimit.middleware");
+const { errorHandler } = require("./middlewares/error.middleware");
 
 const app = express();
 
@@ -25,15 +27,14 @@ app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
 app.use(compression());
 
-app.get("/", (_req, res) => {
-  res.send("Hello World!");
-});
+app.get("/health", (_req, res) => res.status(200).send("OK"));
 
 app.use((_req, res) => {
   res.status(404).json({ error: "Ruta no encontrada" });
 });
+app.use(errorHandler);
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server started in ${NODE_ENV} mode`);
-  console.log(`🌐 Listening at http://localhost:${PORT}`);
+  logger.info(`🚀 Server started in ${NODE_ENV} mode`);
+  logger.info(`🌐 Listening at http://localhost:${PORT}`);
 });
