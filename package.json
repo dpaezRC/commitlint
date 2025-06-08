@@ -7,8 +7,7 @@
     "dev": "node ./src/index.js",
     "lint": "eslint . --ext .js",
     "build": "node esbuild.config.js",
-    "prepare": "husky",
-    "commit": "git-cz"
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
@@ -24,24 +23,15 @@
     "http-status": "^2.1.0",
     "morgan": "^1.10.0",
     "winston": "^3.17.0",
-    "winston-daily-rotate-file": "^5.0.0",
-    "xss-clean": "^0.1.4"
+    "winston-daily-rotate-file": "^5.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@commitlint/cz-commitlint": "^19.8.1",
     "@eslint/js": "^9.28.0",
-    "commitizen": "^4.3.1",
     "esbuild": "^0.25.5",
     "eslint": "^9.28.0",
     "globals": "^16.2.0",
-    "husky": "^9.1.7",
-    "inquirer": "^9.3.7"
-  },
-  "config": {
-    "commitizen": {
-      "path": "@commitlint/cz-commitlint"
-    }
+    "husky": "^9.1.7"
   }
 }
