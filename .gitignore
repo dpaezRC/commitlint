@@ -5,3 +5,6 @@ dist/
 
 # env vars
 .env
+
+# ide
+.vscode
