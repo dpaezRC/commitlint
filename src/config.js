@@ -1,6 +1,6 @@
 const NODE_ENVS = {
-  PRODUCTION: "production",
-  DEVELOPMENT: "development",
+  PRODUCTION: 'production',
+  DEVELOPMENT: 'development',
 };
 
 const RATE_LIMIT = {

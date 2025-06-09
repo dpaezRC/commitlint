@@ -1,6 +1,6 @@
-const { status: httpStatus } = require("http-status");
-const logger = require("../utils/logger.util");
-const { NODE_ENV, NODE_ENVS } = require("../config");
+const { status: httpStatus } = require('http-status');
+const logger = require('../utils/logger.util');
+const { NODE_ENV, NODE_ENVS } = require('../config');
 
 class ApiError extends Error {
   /**
@@ -16,7 +16,7 @@ class ApiError extends Error {
     statusCode = httpStatus.INTERNAL_SERVER_ERROR,
     message = httpStatus[httpStatus.INTERNAL_SERVER_ERROR],
     isOperational = true,
-    stack = "",
+    stack = '',
     internalCode,
   } = {}) {
     super(message);
